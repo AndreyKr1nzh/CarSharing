@@ -1,0 +1,193 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== КОНТЕЙНЕР ========== */
+.custom-carpage-container {
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+/* Кнопка "Назад" */
+.custom-carpage-back {
+    color: var(--primary) !important;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.custom-carpage-back:hover {
+    color: var(--primary-dark) !important;
+    transform: translateX(-3px);
+}
+
+/* Заголовок */
+.custom-carpage-title {
+    color: var(--dark-bg);
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Фото */
+.custom-carpage-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.custom-carpage-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.custom-carpage-image-placeholder {
+    background-color: var(--gray-light) !important;
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Карточка информации */
+.custom-carpage-info-card,
+.custom-carpage-specs-card {
+    background-color: var(--dark-bg) !important;
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.custom-carpage-info-card .card-title,
+.custom-carpage-specs-card .card-title {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Текст информации */
+.custom-carpage-info-text {
+    color: var(--bg-light);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.custom-carpage-info-text strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+
+/* Таблица характеристик */
+.custom-carpage-table {
+    margin-bottom: 0;
+}
+
+.custom-carpage-table tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    color: var(--dark-bg);
+}
+
+.custom-carpage-table tbody td:first-child {
+    font-weight: 600;
+    background-color: var(--bg-light);
+    width: 200px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .custom-carpage-title {
+        font-size: 1.5rem;
+    }
+    
+    .custom-carpage-info-card .card-title,
+    .custom-carpage-specs-card .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .custom-carpage-info-text {
+        font-size: 0.85rem;
+    }
+    
+    .custom-carpage-table tbody td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .custom-carpage-table tbody td:first-child {
+        width: 120px;
+    }
+}
+
+/* client/src/components/CatalogPage/CarPage.css */
+
+/* ========== СПИСОК ХАРАКТЕРИСТИК ========== */
+.custom-carpage-specs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: var(--white);
+    width: 40%;
+}
+
+.spec-value {
+    color: var(--bg-light);
+    font-weight: 500;
+    width: 60%;
+    text-align: right;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+    .spec-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .spec-label,
+    .spec-value {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .spec-value {
+        color: var(--accent);
+    }
+}

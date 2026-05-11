@@ -1,0 +1,114 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== КОНТЕЙНЕР ========== */
+.custom-users-container {
+    background-color: var(--dark-bg);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+/* Заголовок */
+.custom-users-title {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Таблица */
+.custom-users-table {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.custom-users-table thead {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.custom-users-table thead th {
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.custom-users-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.custom-users-table tbody tr:hover {
+    background-color: rgba(0, 88, 221, 0.05);
+}
+
+.custom-users-table tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    color: var(--dark-bg);
+}
+
+/* Селект роли */
+.custom-users-select {
+    background-color: var(--white) !important;
+    border: 1px solid var(--gray-border) !important;
+    border-radius: 8px !important;
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.custom-users-select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(0, 88, 221, 0.1) !important;
+    outline: none !important;
+}
+
+/* Спиннер загрузки */
+.custom-users-spinner {
+    color: var(--primary);
+}
+
+.custom-users-spinner-text {
+    color: var(--white);
+    margin-top: 10px;
+}
+
+/* Сообщения */
+.custom-users-alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.custom-users-alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Пустое сообщение */
+.custom-users-empty {
+    color: var(--white);
+    text-align: center;
+    padding: 40px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}

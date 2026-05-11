@@ -1,0 +1,73 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточка забронированной машины */
+.custom-booked-card {
+    background-color: var(--dark-bg) !important;
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+/* Заголовок */
+.custom-booked-title {
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Текст */
+.custom-booked-text {
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.custom-booked-text strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Кнопка "Начать поездку" */
+.custom-booked-btn-start {
+    background-color: var(--primary) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 6px 16px !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.custom-booked-btn-start:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Кнопка "Отменить бронь" */
+.custom-booked-btn-cancel {
+    background-color: transparent !important;
+    color: var(--white) !important;
+    border: 1px solid var(--white) !important;
+    border-radius: 8px !important;
+    padding: 6px 16px !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.custom-booked-btn-cancel:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}

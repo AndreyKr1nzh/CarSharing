@@ -1,0 +1,204 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== ХЕДЕР ========== */
+.custom-header {
+    background-color: var(--dark-bg) !important;
+    box-shadow: var(--header-shadow);
+    padding: 0.5rem 0;
+}
+
+/* Логотип */
+.custom-header-brand {
+    color: var(--accent) !important;
+    font-weight: 800 !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease;
+}
+
+.custom-header-brand:hover {
+    color: var(--accent) !important;
+    opacity: 0.9;
+}
+
+/* Ссылки навигации */
+.custom-header-nav .nav-link {
+    color: #FFFFFF !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.custom-header-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent) !important;
+}
+
+/* Выпадающее меню */
+.custom-header-dropdown .dropdown-toggle {
+    background-color: transparent !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.custom-header-dropdown .dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Меню при открытии */
+.custom-header-dropdown .dropdown-menu {
+    background-color: var(--white) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    margin-top: 8px !important;
+    padding: 8px 0 !important;
+}
+
+/* Элементы меню */
+.custom-header-dropdown .dropdown-item {
+    color: var(--dark-bg) !important;
+    font-weight: 500;
+    padding: 10px 20px !important;
+    transition: all 0.2s ease;
+}
+
+.custom-header-dropdown .dropdown-item:hover {
+    background-color: var(--bg-light) !important;
+    color: var(--primary) !important;
+}
+
+/* Разделитель */
+.custom-header-dropdown .dropdown-divider {
+    background-color: var(--gray-border) !important;
+    margin: 5px 0 !important;
+}
+
+/* Кнопки "Войти" и "Регистрация" */
+.custom-header-auth .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.custom-header-auth .nav-link:first-child {
+    border: 1px solid var(--accent);
+}
+
+.custom-header-auth .nav-link:first-child:hover {
+    background-color: rgba(255, 149, 10, 0.1);
+    color: var(--accent) !important;
+}
+
+.custom-header-auth .nav-link:last-child {
+    background-color: var(--accent);
+    color: var(--dark-bg) !important;
+}
+
+.custom-header-auth .nav-link:last-child:hover {
+    background-color: #e08500;
+}
+
+/* Аватар */
+.custom-header-avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+}
+
+/* Кнопка гамбургера (мобильная версия) */
+.custom-header-toggler {
+    border-color: var(--accent);
+}
+
+.custom-header-toggler:focus {
+    box-shadow: none;
+}
+
+.name {
+    color: #FFFFFF;
+}
+
+.name:hover {
+    color: var(--accent);
+}
+
+/* client/src/styles/header.css (добавить в конец) */
+
+/* ========== ФУТЕР ========== */
+.custom-footer {
+    background-color: var(--dark-bg);
+    margin-top: 50px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.custom-footer-text {
+    color: var(--white);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.custom-footer-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin: 3px 0;
+}
+
+.custom-footer-link:hover {
+    color: var(--accent);
+}
+
+.custom-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-footer-bottom p {
+    color: var(--white);
+    opacity: 0.6;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Кнопка "Наверх" */
+.custom-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.custom-scroll-top:hover {
+    transform: scale(1.1);
+}

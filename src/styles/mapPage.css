@@ -1,0 +1,241 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ========== СТРАНИЦА КАРТЫ ========== */
+.custom-map-container {
+    min-height: 100vh;
+    padding: 30px 0 60px;
+}
+
+/* Заголовок страницы */
+.custom-map-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease;
+}
+
+.custom-map-title {
+    color: var(--dark-bg);
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.custom-map-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.custom-map-subtitle {
+    color: var(--dark-bg);
+    font-size: 1.1rem;
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+/* Статистика */
+.custom-map-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 20px 35px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    animation: slideInLeft 0.6s ease;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card:nth-child(2) {
+    animation: slideInRight 0.6s ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0.2s;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--dark-bg);
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Контейнер карты */
+.custom-map-wrapper {
+    background-color: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    animation: fadeIn 0.8s ease 0.3s backwards;
+    transition: transform 0.3s ease;
+}
+
+.custom-map-wrapper:hover {
+    transform: scale(1.01);
+}
+
+/* Информационный блок под картой */
+.custom-map-info {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+    color: var(--white);
+    animation: fadeIn 0.8s ease 0.6s backwards;
+}
+
+.info-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.info-icon {
+    font-size: 1.8rem;
+}
+
+.info-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.info-text strong {
+    color: var(--accent);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .custom-map-title {
+        font-size: 1.8rem;
+    }
+    
+    .custom-map-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .stat-card {
+        padding: 15px 25px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item {
+        padding: 10px;
+    }
+}

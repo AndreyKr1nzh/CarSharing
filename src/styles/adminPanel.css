@@ -1,0 +1,88 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== КОНТЕЙНЕР АДМИНКИ ========== */
+.custom-admin-container {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+/* Заголовок */
+.custom-admin-title {
+    color: var(--dark-bg);
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Вкладки (Tabs) */
+.custom-admin-nav {
+    border-bottom: 2px solid var(--gray-border);
+    margin-bottom: 25px;
+}
+
+.custom-admin-nav .nav-link {
+    color: var(--dark-bg);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.custom-admin-nav .nav-link:hover {
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.custom-admin-nav .nav-link.active {
+    color: var(--primary);
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary);
+}
+
+/* Контент вкладок */
+.custom-admin-pane {
+    padding: 20px 0;
+}
+
+/* Разделитель */
+.custom-admin-divider {
+    border-top: 1px solid var(--gray-border);
+    margin: 30px 0;
+}
+
+/* Спиннер загрузки */
+.custom-admin-spinner {
+    color: var(--primary);
+}
+
+.custom-admin-spinner-text {
+    color: var(--dark-bg);
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Сообщение о машинах */
+.custom-admin-info {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    color: var(--dark-bg);
+    font-style: italic;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

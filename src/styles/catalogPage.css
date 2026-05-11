@@ -1,0 +1,118 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Контейнер каталога */
+.custom-catalog-container {
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+/* Заголовок страницы */
+.custom-catalog-title {
+    color: var(--dark-bg);
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Счётчик машин */
+.custom-catalog-count {
+    color: var(--dark-bg);
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 30px;
+    display: inline-block;
+    width: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.6s ease 0.2s backwards;
+}
+
+/* Пустое сообщение */
+.custom-catalog-empty {
+    text-align: center;
+    padding: 50px;
+    color: var(--dark-bg);
+    opacity: 0.6;
+    font-size: 1.2rem;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Сетка карточек */
+.custom-catalog-grid {
+    animation: fadeIn 0.8s ease 0.4s backwards;
+}
+
+/* Карточка машины с анимацией при появлении */
+.custom-catalog-card {
+    opacity: 0;
+    animation: scaleIn 0.5s ease forwards;
+}
+
+/* Задержки для карточек */
+.custom-catalog-card:nth-child(1) { animation-delay: 0.1s; }
+.custom-catalog-card:nth-child(2) { animation-delay: 0.15s; }
+.custom-catalog-card:nth-child(3) { animation-delay: 0.2s; }
+.custom-catalog-card:nth-child(4) { animation-delay: 0.25s; }
+.custom-catalog-card:nth-child(5) { animation-delay: 0.3s; }
+.custom-catalog-card:nth-child(6) { animation-delay: 0.35s; }
+.custom-catalog-card:nth-child(7) { animation-delay: 0.4s; }
+.custom-catalog-card:nth-child(8) { animation-delay: 0.45s; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .custom-catalog-title {
+        font-size: 1.5rem;
+    }
+    
+    .custom-catalog-count {
+        font-size: 0.9rem;
+    }
+}

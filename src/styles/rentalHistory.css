@@ -1,0 +1,108 @@
+:root {
+    --bg-light: #EEEAE3;
+    --primary: #0058DD;
+    --primary-dark: #0047b3;
+    --dark-bg: #031F39;
+    --accent: #FF950A;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточка истории */
+.custom-history-card {
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+/* Заголовок */
+.custom-history-title {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Пустое сообщение */
+.custom-history-empty {
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+    padding: 30px;
+    opacity: 0.8;
+}
+
+/* Контейнер для таблицы с прокруткой — только когда действительно нужно */
+.custom-history-table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* Таблица */
+.custom-history-table {
+    background-color: var(--white);
+    border-radius: 12px;
+    margin-bottom: 0;
+    width: 100%;
+    min-width: auto;  /* ← убираем фиксированную минимальную ширину */
+}
+
+/* Заголовки таблицы */
+.custom-history-table thead {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.custom-history-table thead th {
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: none;
+    white-space: nowrap;
+}
+
+.custom-history-table tbody td {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: var(--dark-bg);
+    white-space: nowrap;
+}
+
+/* Badge статуса */
+.custom-history-badge-paid {
+    background-color: var(--primary) !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.custom-history-badge-pending {
+    background-color: var(--accent) !important;
+    color: var(--dark-bg) !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Адаптивность — скролл только на узких экранах */
+@media (max-width: 768px) {
+    .custom-history-table {
+        min-width: 600px;  /* только на маленьких экранах появляется прокрутка */
+    }
+    
+    .custom-history-title {
+        font-size: 1.1rem;
+    }
+    
+    .custom-history-table thead th,
+    .custom-history-table tbody td {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
